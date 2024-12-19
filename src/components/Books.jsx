@@ -15,15 +15,11 @@ const BookList = () => {
 
   const books = data?.books || [];
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: {error}</div>;
-
   const lowerCaseSearchTerm = searchTerm.toLowerCase();
 
   const filteredBooks = books.filter((book) =>
     book.title.toLowerCase().includes(lowerCaseSearchTerm)
   );
-
 
   return (
     <div>
