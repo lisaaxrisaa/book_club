@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Login from './components/Login';
 import SingleBook from './components/SingleBook';
 import Account from './components/Account';
+import Registration from './components/Register';
 
 const App = () => {
   return (
@@ -12,10 +13,10 @@ const App = () => {
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path="/books" element={<BookList />} />
+          <Route path="/" element={<BookList />} />
           <Route path="/books/:id" element={<SingleBook />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/register" element={<Register />} /> */}
+          <Route path="/register" element={<Registration />} />
           <Route path="/account" element={<Account />} />
         </Routes>
       </BrowserRouter>
